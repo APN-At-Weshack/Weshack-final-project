@@ -16,10 +16,6 @@ The goal is to provide a supportive, interactive learning environment for langua
 
 ---
 
-## Workflow Diagram  
-[Diagram Here]
----
-
 ## Technologies Used  
 - **Speech Recognition**: [VOSK Offline Speech Recognition API]  
 - **Generative AI**: [Gemini chatbot by Google]  
