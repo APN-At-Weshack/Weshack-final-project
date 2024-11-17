@@ -34,7 +34,7 @@ def ask_gemini():
     """
 
     # Prompt for Gemini
-    prompt = f"Hello Gemini, I'm learning English. Can you ask me an easy and random question to test how well I'm able to speak and answer in that language?"
+    prompt = f"Hello Gemini, I'm learning English. Can you ask me an easy and random question to test how well I'm able to speak and answer in that language? Please make this question something unique, yet easy. Only respond with the question."
 
     # Generate response using the google-generativeai library
     try:
@@ -51,7 +51,7 @@ def ask_gemini():
         # Insert the object into MongoDB
         result = collection.insert_one(question_object)
         object_id = question_object["conId"]
-        
+
         # Return the response
         return {"id": str(object_id), "question": response.text}
 

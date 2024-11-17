@@ -73,7 +73,7 @@ async def process_audio(audio: UploadFile = File(...), conID: str = Form(...)):
             # p1data["response"] = p1data["response"].replace('\n', '')
             
             #Promt 2 question
-            prompt2 = f"{vosk_data}\n\nPlease ask me another question based off my answer that relates to me learning english, please try to make the vocabulary as simple as possible and avoid using complex words. Don't ask me unrelated questions related that don't involve me answering in a way to learn english thank you."
+            prompt2 = f"{vosk_data}\n\nPlease ask me another question based off my answer that relates to me learning english, please try to make the vocabulary as simple as possible and avoid using complex words. Don't ask me unrelated questions related that don't involve me answering in a way to learn english thank you. ONLY repond with a new question and do not comment on my performance of the previous sentence"
             response2 = model.generate_content(prompt2)
 
             print(response2)
