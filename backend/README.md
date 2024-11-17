@@ -22,8 +22,8 @@ The goal is to provide a supportive, interactive learning environment for langua
 ---
 
 ## Technologies Used  
-- **Speech Recognition**: [VOSK Offline Speech Recognition API]  
-- **Generative AI**: [Gemini chatbot by Google]  
+- **Speech Recognition**: [VOSK Offline Speech Recognition API]
+- **Generative AI**: [Chat GPT, Gemini chatbot by Google]  
 - **Programming Languages**: [Python, JSON, TypeScript]  
 - **Frameworks and Tools**: [ReactJS, Docker, MongoDB, FastAPI, NextJS, RecordRTC]  
 
