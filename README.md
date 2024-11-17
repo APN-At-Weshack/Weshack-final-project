@@ -37,9 +37,9 @@ The goal is to provide a supportive, interactive learning environment for langua
 ---
 
 ## Contributors  
-- [Kush Patel]   
-- [Norbu Ciren]  
-- [Nicholas Tranquilli]
-- [Tirth Patel]  
+- [Kush Patel - https://github.com/Deuos]   
+- [Norbu Ciren - https://github.com/NorbuC]  
+- [Nicholas Tranquilli - https://github.com/NicholasTranquilli]
+- [Tirth Patel - https://github.com/Tirth-Patel7]  
 
 ---
