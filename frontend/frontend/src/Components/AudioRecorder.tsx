@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 import RecordRTC, { RecordRTCPromisesHandler, StereoAudioRecorder } from 'recordrtc';
+import Link from 'next/link';
 
 interface AudioRecorderProps {
   conID: string;
@@ -20,7 +21,7 @@ export default function AudioRecorder(props: AudioRecorderProps) {
       aiQuestion: props.question,
       Response: '',
       ConfidenceScore: '',
-      Question: '',
+      Question: ''
     },
   ]);
 
@@ -88,7 +89,7 @@ export default function AudioRecorder(props: AudioRecorderProps) {
               userResponse: 'User response goes here', // Replace with actual response if needed
               Response,
               ConfidenceScore,
-              Question,
+              Question
             },
           ]);
 
@@ -164,20 +165,18 @@ export default function AudioRecorder(props: AudioRecorderProps) {
 
       {conversations.map((conv, index) => (
         <div key={index} className="w-full max-w-3xl mb-4">
-          
-          {/* AI Explanation */}
-          {conv.Response && (
-            <div className="p-4 bg-[#00C178] border-2 border-[#00C178] rounded-lg shadow-md mb-2 max-w-[50%]">
-              <h2 className="mb-2 text-lg font-bold">AI Explanation:</h2>
-              <p className="text-white">{conv.Response}</p>
-            </div>
-          )}
 
-          {/* Score */}
-          {conv.ConfidenceScore && (
-            <div className={`p-4 border rounded-lg shadow-md mb-2 max-w-[50%] ${getScoreBackgroundColor(conv.ConfidenceScore)}`}>
-              <h2 className="mb-2 text-lg font-bold">Score:</h2>
-              <p className="text-white">{conv.ConfidenceScore}</p>
+          {/* AI Explanation */}
+          {conv.Response && conv.ConfidenceScore && (
+            <div className='flex flex-row space-x-2'>
+              <div className="p-4 text-black border-2 border-[#00C178] rounded-lg shadow-md mb-2 max-w-[45%]">
+                <h2 className="mb-2 text-lg font-bold">AI Explanation:</h2>
+                <p className="text-black">{conv.Response}</p>
+              </div>
+              <div className={`max-w-[20%] h-[100px] align-middle p-4 shadow-md rounded-lg ${getScoreBackgroundColor(conv.ConfidenceScore)}`}>
+                <p className='mb-2 text-lg font-bold'>Score:</p>
+                <p className="text-white text-center text-xl">{Math.round(Number(conv.ConfidenceScore))}%</p>
+              </div>
             </div>
           )}
 
@@ -194,6 +193,7 @@ export default function AudioRecorder(props: AudioRecorderProps) {
           {firstRec ? "Begin" : "Stop"}
         </button>
       </div>
+      <Link href="/">End Conversation</Link>
 
       <div className='bottom-0 mt-10 text-sm'>SpeakEasy can make mistakes. Information is AI-generated, not 100% accurate.</div>
     </div>

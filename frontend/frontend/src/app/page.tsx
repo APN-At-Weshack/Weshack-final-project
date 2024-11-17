@@ -20,12 +20,12 @@ export default function Home() {
               Learn languages via conversations. Choose your language and start improving with interactive exercises and real-life scenarios.
             </div>
             <div>
-              <div className="underline text-lg decoration-[#25D366]">
+              <div className="underline text-lg decoration-[#00C178]">
                 Select Language: <span className="font-bold">English</span></div>
             </div>
             <div className='flex flex-col space-y-2'>
-              <Link className="w-[20%] mx-auto bg-[#25D366] hover:bg-black font-bold text-white px-8 py-3 rounded-lg text-2xl border-black" href="/Chat" >Start</Link>
-              <Link className="w-[30%] mx-auto underline font-bold decoration-[#25D366] decoration-2 hover:decoration-black text-lg" href="/Conversations">Past Conversations</Link>
+              <Link className="w-[20%] mx-auto bg-[#00C178] hover:bg-black font-bold text-white px-8 py-3 rounded-lg text-2xl border-black" href="/Chat" >Start</Link>
+              <Link className="w-[30%] mx-auto underline font-bold decoration-[#00C178] decoration-2 hover:decoration-black text-lg" href="/Conversations">Past Conversations</Link>
             </div>
 
           </div>
