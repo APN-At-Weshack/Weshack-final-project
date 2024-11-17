@@ -31,7 +31,8 @@ The goal is to provide a supportive, interactive learning environment for langua
 ## Future Improvements  
 - Support for additional languages.  
 - Support for mobile devices and offline functionality.
-- Visual aids and diagrams for user engagement. 
+- Visual aids and diagrams for user engagement.
+- Ability to read your past conversations in detail
 
 ---
 
